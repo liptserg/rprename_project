@@ -1,10 +1,10 @@
-Преобразование файла ui в py
+РџСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ С„Р°Р№Р»Р° ui РІ py
 QT6
 uic -o window.py -g python window.ui
 QT5
 pyuic5 -o window.py window.ui
 
-Можно ui грузить так
+РњРѕР¶РЅРѕ ui РіСЂСѓР·РёС‚СЊ С‚Р°Рє
 from PyQt5 import uic
 from PyQt5.QtWidgets import QMainWindow
 
@@ -13,7 +13,7 @@ class MainWindow(QMainWindow):
       super(MainWindow, self).__init__()
       uic.loadUi('mainwindow.ui', self)
 
-Класс windows в view.py можно определить так:
+РљР»Р°СЃСЃ windows РІ view.py РјРѕР¶РЅРѕ РѕРїСЂРµРґРµР»РёС‚СЊ С‚Р°Рє:
 # rprename/views.py
 # Snip...
 
