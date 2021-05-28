@@ -13,3 +13,16 @@ class MainWindow(QMainWindow):
       super(MainWindow, self).__init__()
       uic.loadUi('mainwindow.ui', self)
 
+Класс windows в view.py можно определить так:
+# rprename/views.py
+# Snip...
+
+class Window(QWidget):
+    def __init__(self):
+        super().__init__()
+        self.ui = Ui_Window()
+        self._setupUI()
+
+    def _setupUI(self):
+        self.ui.setupUi(self)
+
