@@ -55,3 +55,6 @@ class Window(QWidget, Ui_Window):
                 self._files.append(Path(file))
                 self.srcFileList.addItem(file)
             self._filesCount = len(self._files)
+
+#TODO log4cplus:ERROR No appenders could be found for logger (DSL).
+#TODO log4cplus:ERROR Please initialize the log4cplus system properly.
