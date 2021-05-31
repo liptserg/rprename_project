@@ -18,25 +18,20 @@ class Ui_Window(object):
         if not Window.objectName():
             Window.setObjectName(u"Window")
         Window.resize(534, 386)
-        sizePolicy = QSizePolicy(QSizePolicy.Fixed, QSizePolicy.Fixed)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(Window.sizePolicy().hasHeightForWidth())
-        Window.setSizePolicy(sizePolicy)
-        self.widget = QWidget(Window)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(11, 11, 518, 362))
-        self.gridLayout = QGridLayout(self.widget)
+        self.layoutWidget = QWidget(Window)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(11, 11, 518, 362))
+        self.gridLayout = QGridLayout(self.layoutWidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
-        self.label = QLabel(self.widget)
+        self.label = QLabel(self.layoutWidget)
         self.label.setObjectName(u"label")
         self.label.setMinimumSize(QSize(0, 15))
         self.label.setMaximumSize(QSize(16777215, 15))
 
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
 
-        self.dirEdit = QLineEdit(self.widget)
+        self.dirEdit = QLineEdit(self.layoutWidget)
         self.dirEdit.setObjectName(u"dirEdit")
         self.dirEdit.setMinimumSize(QSize(0, 30))
         self.dirEdit.setMaximumSize(QSize(16777215, 30))
@@ -44,7 +39,7 @@ class Ui_Window(object):
 
         self.gridLayout.addWidget(self.dirEdit, 1, 0, 1, 1)
 
-        self.loadFilesButton = QPushButton(self.widget)
+        self.loadFilesButton = QPushButton(self.layoutWidget)
         self.loadFilesButton.setObjectName(u"loadFilesButton")
         self.loadFilesButton.setMinimumSize(QSize(0, 30))
         self.loadFilesButton.setMaximumSize(QSize(16777215, 30))
@@ -54,61 +49,61 @@ class Ui_Window(object):
 
         self.gridLayout.addWidget(self.loadFilesButton, 1, 2, 1, 1)
 
-        self.splitter = QSplitter(self.widget)
+        self.splitter = QSplitter(self.layoutWidget)
         self.splitter.setObjectName(u"splitter")
         self.splitter.setOrientation(Qt.Horizontal)
-        self.widget1 = QWidget(self.splitter)
-        self.widget1.setObjectName(u"widget1")
-        self.verticalLayout = QVBoxLayout(self.widget1)
+        self.layoutWidget1 = QWidget(self.splitter)
+        self.layoutWidget1.setObjectName(u"layoutWidget1")
+        self.verticalLayout = QVBoxLayout(self.layoutWidget1)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
-        self.label_2 = QLabel(self.widget1)
+        self.label_2 = QLabel(self.layoutWidget1)
         self.label_2.setObjectName(u"label_2")
         self.label_2.setFont(font)
 
         self.verticalLayout.addWidget(self.label_2)
 
-        self.srcFileList = QListWidget(self.widget1)
+        self.srcFileList = QListWidget(self.layoutWidget1)
         self.srcFileList.setObjectName(u"srcFileList")
 
         self.verticalLayout.addWidget(self.srcFileList)
 
-        self.splitter.addWidget(self.widget1)
-        self.widget2 = QWidget(self.splitter)
-        self.widget2.setObjectName(u"widget2")
-        self.verticalLayout_2 = QVBoxLayout(self.widget2)
+        self.splitter.addWidget(self.layoutWidget1)
+        self.layoutWidget2 = QWidget(self.splitter)
+        self.layoutWidget2.setObjectName(u"layoutWidget2")
+        self.verticalLayout_2 = QVBoxLayout(self.layoutWidget2)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.label_3 = QLabel(self.widget2)
+        self.label_3 = QLabel(self.layoutWidget2)
         self.label_3.setObjectName(u"label_3")
         self.label_3.setFont(font)
 
         self.verticalLayout_2.addWidget(self.label_3)
 
-        self.dstFileList = QListWidget(self.widget2)
+        self.dstFileList = QListWidget(self.layoutWidget2)
         self.dstFileList.setObjectName(u"dstFileList")
 
         self.verticalLayout_2.addWidget(self.dstFileList)
 
-        self.splitter.addWidget(self.widget2)
+        self.splitter.addWidget(self.layoutWidget2)
 
         self.gridLayout.addWidget(self.splitter, 2, 0, 1, 3)
 
-        self.label_4 = QLabel(self.widget)
+        self.label_4 = QLabel(self.layoutWidget)
         self.label_4.setObjectName(u"label_4")
         self.label_4.setMinimumSize(QSize(0, 15))
         self.label_4.setMaximumSize(QSize(16777215, 15))
 
         self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
 
-        self.prefixEdit = QLineEdit(self.widget)
+        self.prefixEdit = QLineEdit(self.layoutWidget)
         self.prefixEdit.setObjectName(u"prefixEdit")
         self.prefixEdit.setMinimumSize(QSize(0, 30))
         self.prefixEdit.setMaximumSize(QSize(16777215, 30))
 
         self.gridLayout.addWidget(self.prefixEdit, 4, 0, 1, 1)
 
-        self.extensionLabel = QLabel(self.widget)
+        self.extensionLabel = QLabel(self.layoutWidget)
         self.extensionLabel.setObjectName(u"extensionLabel")
         self.extensionLabel.setMinimumSize(QSize(0, 30))
         self.extensionLabel.setMaximumSize(QSize(16777215, 30))
@@ -116,7 +111,7 @@ class Ui_Window(object):
 
         self.gridLayout.addWidget(self.extensionLabel, 4, 1, 1, 1)
 
-        self.renameFilesButton = QPushButton(self.widget)
+        self.renameFilesButton = QPushButton(self.layoutWidget)
         self.renameFilesButton.setObjectName(u"renameFilesButton")
         self.renameFilesButton.setMinimumSize(QSize(0, 30))
         self.renameFilesButton.setMaximumSize(QSize(16777215, 30))
@@ -124,7 +119,7 @@ class Ui_Window(object):
 
         self.gridLayout.addWidget(self.renameFilesButton, 4, 2, 1, 1)
 
-        self.progressBar = QProgressBar(self.widget)
+        self.progressBar = QProgressBar(self.layoutWidget)
         self.progressBar.setObjectName(u"progressBar")
         self.progressBar.setValue(0)
 

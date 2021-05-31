@@ -26,3 +26,5 @@ class Window(QWidget):
     def _setupUI(self):
         self.ui.setupUi(self)
 
+PySide6.QtGui заменил на PyQt6.QtGui
+Зря менял, добавил в проект модуль PySide6
