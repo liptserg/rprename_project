@@ -4,10 +4,9 @@
 """This module provides the RP Renamer application."""
 
 import sys
-
 from PySide6.QtWidgets import QApplication
-
 from .views import Window
+
 
 def main():
     # Create the application
@@ -17,4 +16,3 @@ def main():
     win.show()
     # Run the event loop
     sys.exit(app.exec())
-

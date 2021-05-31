@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'window.ui'
-##
-## Created by: Qt User Interface Compiler version 6.1.0
-##
-## WARNING! All changes made in this file will be lost when recompiling UI file!
+# Form generated from reading UI file 'window.ui'
+#
+# Created by: Qt User Interface Compiler version 6.1.0
+#
+# WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
 from PySide6.QtCore import *
@@ -142,4 +142,3 @@ class Ui_Window(object):
         self.extensionLabel.setText(QCoreApplication.translate("Window", u".jpg", None))
         self.renameFilesButton.setText(QCoreApplication.translate("Window", u"&Rename", None))
     # retranslateUi
-
