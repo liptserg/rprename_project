@@ -6,7 +6,9 @@
 from collections import deque
 from pathlib import Path
 
+from PySide6.QtCore import QThread
 from PySide6.QtWidgets import QFileDialog, QWidget
+from .rename import Renamer
 from .ui.window import Ui_Window
 
 FILTERS = ";;".join(
