@@ -22,7 +22,7 @@ class Renamer(QObject):
     def renameFiles(self):
         for fileNumber, file in enumerate(self._files, 1):
             newFile = file.parent.joinpath(
-                f"{self._prefix}{str(fileNumber)}{file.suffix}"
+                f"{self._prefix}{fileNumber:03d}{file.suffix}"
             )
             file.rename(newFile)
             time.sleep(0.1)  # Comment this line to rename files faster.
