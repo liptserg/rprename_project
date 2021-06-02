@@ -6,13 +6,13 @@
 import time
 from pathlib import Path
 
-from PySide6.QtCore import QObject, pyqtSignal
+from PySide6.QtCore import QObject, Signal
 
 class Renamer(QObject):
     # Define custom signals
-    progressed = pyqtSignal(int)
-    renamedFile = pyqtSignal(Path)
-    finished = pyqtSignal()
+    progressed = Signal(int)
+    renamedFile = Signal(Path)
+    finished = Signal()
 
     def __init__(self, files, prefix):
         super().__init__()
