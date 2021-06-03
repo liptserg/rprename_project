@@ -117,6 +117,3 @@ class Window(QWidget, Ui_Window):
     def _updateProgressBar(self, fileNumber):
         progressPercent = int(fileNumber / self._filesCount * 100)
         self.progressBar.setValue(progressPercent)
-
-#TODO log4cplus:ERROR No appenders could be found for logger (DSL).
-#TODO log4cplus:ERROR Please initialize the log4cplus system properly.
